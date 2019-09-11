@@ -124,6 +124,8 @@ void CompressedPublisher::publish(const sensor_msgs::Image& message, const Publi
         {
           // convert color images to BGR8 format
           targetFormat = "bgr8";
+          compressed.format = targetFormat;
+          compressed.format += "; jpeg compressed ";
           compressed.format += targetFormat;
         }
 
